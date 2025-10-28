@@ -27,7 +27,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
     def tearDownClass(cls):
         # tanquem browser
         # comentar la propera línia si volem veure el resultat de l'execució al navegador
-        #cls.selenium.quit()
+        cls.selenium.quit()
         super().tearDownClass()
 
     """ 
@@ -95,6 +95,5 @@ class MySeleniumTests(StaticLiveServerTestCase):
         password_input.send_keys('contrasenya123')
         self.selenium.find_element(By.XPATH,'//input[@value="Log in"]').click()
 
-        # testejem que hem entrat a l'admin panel comprovant el títol de la pàgina i comprovem que no tenim permisos
+        # testejem que hem entrat a l'admin panel comprovant el títol de la pàgina i veiem que no tenim permisos
         self.assertEqual( self.selenium.title , "Site administration | Django site admin" )
-
