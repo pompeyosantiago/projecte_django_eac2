@@ -97,3 +97,4 @@ class MySeleniumTests(StaticLiveServerTestCase):
 
         # testejem que hem entrat a l'admin panel comprovant el títol de la pàgina i comprovem que no tenim permisos
         self.assertEqual( self.selenium.title , "Site administration | Django site admin" )
+
